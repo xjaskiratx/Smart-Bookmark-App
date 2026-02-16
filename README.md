@@ -72,4 +72,4 @@ Recommended: Vercel
 - Add the production redirect URL in Supabase Auth settings
 
 ## Issues & Fixes
-- Google sign-in reused the last account after logout, so it didn’t prompt for a different account. The workaround is to use Google’s “Use another account” option or an Incognito window. (We can later add `prompt=select_account` to force the chooser.)
+- Google sign-in reused the last account after logout and didn’t show the account picker. Fixed by adding `queryParams: { prompt: "select_account" }` to the OAuth sign-in call so Google always prompts for account selection.

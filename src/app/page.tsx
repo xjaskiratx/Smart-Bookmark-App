@@ -112,7 +112,10 @@ export default function HomePage() {
     const { error: signInError } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: `${origin}/auth/callback`
+        redirectTo: `${origin}/auth/callback`,
+        queryParams: {
+          prompt: "select_account"
+        }
       }
     });
 
