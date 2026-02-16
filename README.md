@@ -2,6 +2,9 @@
 
 Simple realtime bookmark manager built with Next.js App Router, Supabase (Auth + Database + Realtime), and Tailwind CSS.
 
+## Live Demo
+https://smart-bookmark-app-three-nu.vercel.app
+
 ## Features
 - Google OAuth only (no email/password)
 - Add + delete bookmarks (URL + title)
