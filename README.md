@@ -73,3 +73,4 @@ Recommended: Vercel
 
 ## Issues & Fixes
 - Google sign-in reused the last account after logout and didn’t show the account picker. Fixed by adding `queryParams: { prompt: "select_account" }` to the OAuth sign-in call so Google always prompts for account selection.
+- Vercel deployment failed with `ERESOLVE` because `eslint-config-next@16.1.6` requires `eslint >= 9` but the lockfile still pinned `eslint 8.57.x`. Fixed by bumping `eslint` to `^9.0.0` and regenerating `package-lock.json`.
